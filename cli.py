@@ -1,3 +1,5 @@
+from logic import make_empty_board, get_winner, other_player, make_move
+
 def make_empty_board():
     return [
         [None, None, None],
