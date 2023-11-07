@@ -1,7 +1,3 @@
-# This file is where game logic lives. No input
-# or output happens here. The logic in this file
-# should be unit-testable.
-
 def make_empty_board():
     return [
         [None, None, None],
@@ -23,3 +19,10 @@ def get_winner(board):
 
 def other_player(player):
     return "X" if player == "O" else "O"
+
+def make_move(board, player, row, col):
+    if 0 <= row < 3 and 0 <= col < 3 and board[row][col] is None:
+        board[row][col] = player
+        return True
+    else:
+        return False
